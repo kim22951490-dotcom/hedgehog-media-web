@@ -1,2 +1,20 @@
 # hedgehog-media-web
-![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=https://github.com/yourusername/yourrepo)
+import QRCodeStyling from "qr-code-styling";
+
+const qrCode = new QRCodeStyling({
+  width: 300,
+  height: 300,
+  data: "https://github.com/yourusername/yourrepo",
+  image: "logo.png",
+  dotsOptions: {
+    color: "#000000",
+    type: "rounded"
+  },
+  backgroundOptions: {
+    color: "#ffffff"
+  },
+  imageOptions: {
+    crossOrigin: "anonymous",
+    margin: 10
+  }
+});
